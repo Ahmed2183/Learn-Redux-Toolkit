@@ -8,12 +8,6 @@ const ListData = () => {
 
     return (
         <>
-            {/* {
-            userData?.map((user) => 
-            <label>{user?.name}</label>
-            )
-        } */}
-
             {
                 userData.length === undefined ? 'No data' :
                     <>
