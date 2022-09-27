@@ -8,7 +8,9 @@ const ListData = () => {
 
     return (
         <>
+            <label style={{ fontSize:40, display:'flex', justifyContent:'center' }}>All Data</label>
             {
+
                 userData.length === undefined ? 'No data' :
                     <>
                         {userData?.map((user) =>
