@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import AddData from './components/AddData';
 import ListData from './components/ListData';
+import Clock from './components/Clock';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
     </div>
     <div className="App">
      <ListData/>
+    </div>
+    <div className="App">
+     <Clock/>
     </div>
     </>
   );
