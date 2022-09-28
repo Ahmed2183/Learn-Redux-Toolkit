@@ -34,6 +34,9 @@ const SearchData = () => {
                 <div>
                   <label>Age: {user?.age}</label>
                 </div>
+                <div>
+                  <label>Age: {user?.time}</label>
+                </div>
               </div>
             )
             }
