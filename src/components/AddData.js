@@ -10,7 +10,12 @@ const AddData = () => {
 
     const addMovie = () => {
 
-        var num = document.getElementById('time').value.replace(/[A-Za-z]/g, "");   //  --> replace(/[A-Za-z]/g, "") used to remove characters from input
+         /* replace(/\d/g, "") --> remove all numbers from the input */
+        //  var num = document.getElementById('time').value.replace(/\d/g, "") ;
+
+        /* replace(/[A-Za-z]/g, "") --> remove all characters from input */
+        var num = document.getElementById('time').value.replace(/[A-Za-z]/g, "");
+
         /* Convert number into minutes and hours */
         var hours = (num / 60);
         var sethours = Math.floor(hours);
@@ -18,6 +23,7 @@ const AddData = () => {
         var setminutes = Math.round(minutes);
         var exacttime = sethours + " hour(s) and " + setminutes + " minute(s)."
 
+        /* Add input data in array */
         let movie = {
             id: Date.now(),
             name: document.getElementById('name').value,
@@ -25,7 +31,8 @@ const AddData = () => {
             time: exacttime,
         }
         movies = [...movies, movie];
-        // console.warn('added', { movies });
+    
+        /* Send array data in redux store */
         dispatch(setUserData(movies));
     }
 
